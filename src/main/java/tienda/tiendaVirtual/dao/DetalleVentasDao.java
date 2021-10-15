@@ -39,7 +39,7 @@ public class DetalleVentasDao {
 		List<DetalleVentas> detalleventas = new ArrayList<DetalleVentas>();
 
 		Conexion conexion = new Conexion();
-		String sql = "SELECT detalle_ventas (codigo_detalle_venta, cantidad_producto, codigo_producto, codigo_venta, valor_total, valor_venta, valoriva FROM detalle_ventas";
+		String sql = "SELECT codigo_detalle_venta, cantidad_producto, codigo_producto, codigo_venta, valor_total, valor_venta, valoriva FROM detalle_ventas";
 
 		try {
 			PreparedStatement preparedStatement = conexion.getConexion().prepareStatement(sql);
@@ -111,7 +111,7 @@ public class DetalleVentasDao {
 		DetalleVentas detalleventas = new DetalleVentas();
 
 		Conexion conexion = new Conexion();
-		String sql = "SELECT detalle_ventas (cantidad_producto, codigo_producto, codigo_venta, valor_total, valor_venta, valoriva FROM detalle_ventas WHERE codigo_detalle_venta = ?";
+		String sql = "SELECT codigo_detalle_venta, cantidad_producto, codigo_producto, codigo_venta, valor_total, valor_venta, valoriva FROM detalle_ventas WHERE codigo_detalle_venta = ?";
 
 		PreparedStatement preparedSatement;
 		try {
